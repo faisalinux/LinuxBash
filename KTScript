@@ -1,0 +1,8 @@
+Xvfb -screen 0 800x600x16 -nolisten tcp -auth /path/to/auth-file &
+
+nohup soffice -invisible -accept='socket,host=localhost,port=8100;urp' -display :0 &
+
+cd /var/www/bin/luceneserver/
+
+nohup java -jar ktlucene.jar&
+

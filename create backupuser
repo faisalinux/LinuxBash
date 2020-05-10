@@ -1,0 +1,10 @@
+CREATE USER 'backupuser'@'%' IDENTIFIED BY 'yuk87Plx';
+
+
+GRANT LOCK TABLES, SELECT ON *.* TO 'backupuser'@'%' IDENTIFIED BY 'yuk87Plx';
+
+update user set password=PASSWORD("yuk87Plx") where User='backupuser';
+
+grant all on *.* to backupuser@'%' identified by 'yuk87Plx';
+
+
